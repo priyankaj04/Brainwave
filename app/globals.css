@@ -20,6 +20,14 @@
 @layer base {
   body {
     @apply font-sora bg-n-8 text-n-1 text-base;
+    font-family: var(--font-sora),
+      ui-sans-serif,
+      system-ui,
+      sans-serif,
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      "Segoe UI Symbol",
+      "Noto Color Emoji"
   }
 }
 

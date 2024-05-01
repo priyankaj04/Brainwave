@@ -5,6 +5,8 @@ import Button from "./Button";
 import Heading from "./Heading";
 import Section from "./Section";
 import Tagline from "./Tagline";
+import PlusSvg from "../assets/svg/PlusSvg";
+import { gradient } from "../assets"
 
 const Roadmap = () => {
   return (
@@ -61,12 +63,25 @@ const Roadmap = () => {
               </div>
             );
           })}
-          <Gradient />
+          <div className="absolute top-[18.25rem] -left-[30.375rem] w-[56.625rem] opacity-60 mix-blend-color-dodge pointer-events-none">
+            <div className="absolute top-1/2 left-1/2 w-[58.85rem] h-[58.85rem] -translate-x-3/4 -translate-y-1/2">
+              <img
+                className="w-full"
+                src={gradient.src}
+                width={942}
+                height={942}
+                alt="Gradient"
+              />
+            </div>
+          </div>
         </div>
         <div className="flex justify-center mt-12 md:mt-15 xl:mt-20">
           <Button href="/roadmap">Our roadmap</Button>
         </div>
       </div>
+      <div className="hidden absolute left-[2rem] -h-1 lg:left-7.5 xl:left-9 lg:right-7.5 xl:right-9 right-[2rem] h-0.25 bg-n-6 pointer-events-none xl:block" />
+      <PlusSvg className="hidden absolute left-[2rem] z-2 xl:block  lg:left-7.5 xl:left-9" />
+      <PlusSvg className="hidden absolute right-[2rem] z-2 xl:block lg:right-7.5 xl:right-9" />
     </Section>
   );
 };

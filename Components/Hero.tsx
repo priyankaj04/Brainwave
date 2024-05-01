@@ -25,7 +25,7 @@ const Hero = () => {
     >
       <div className="px-5 md:px-10 lg:px-15 items-center flex flex-col " ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] items-center text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
-          <h1 className="h1 font-grotesk mb-6">
+          <h1 className="h1 font-sora mb-6">
             Explore the Possibilites of&nbsp;AI&nbsp;Chatting with{" "}
             <span className="inline-block relative">
               Brainwave
