@@ -9,8 +9,7 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 
 import { Empty } from "@/components/empty";
-import { Heading } from "@/components/heading";
-import { Loader } from "@/components/loader";
+import { ChatHeading } from "@/components/ChatHeading";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -55,7 +54,7 @@ const VideoPage = () => {
 
   return (
     <div>
-      <Heading
+      <ChatHeading
         title="Video Generation"
         description="Our most advanced AI Video Generation model."
         icon={Video}
@@ -67,7 +66,7 @@ const VideoPage = () => {
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
-              className="rounded-lg border w-full p-4 px-3 md:px-6 focus-within:shadow-sm grid grid-cols-12 gap-2"
+              className="rounded-lg border items-center bg-n-4/10 backdrop-blur-lg border-n-10 w-full p-4 px-3 md:px-6 focus-within:shadow-sm grid grid-cols-12 gap-2"
             >
               <FormField
                 name="prompt"
@@ -77,14 +76,14 @@ const VideoPage = () => {
                       <Input
                         {...field}
                         placeholder="Start typing here..."
-                        className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
+                        className="border-0 border-transparent outline-none focus:outline-none focus:border-transparent text-xl bg-n-6/10 font-sora focus:ring-0 focus:ring-transparent"
                         disabled={isLoading}
                       />
                     </FormControl>
                   </FormItem>
                 )}
               />
-              <Button className="col-span-12 lg:col-span-2 w-full" disabled={isLoading}>
+              <Button className="col-span-12 lg:col-span-2 w-full bg-orange-700" disabled={isLoading}>
                 Generate
               </Button>
             </form>
@@ -93,7 +92,7 @@ const VideoPage = () => {
         <div className="space-y-4 mt-4">
           {isLoading && (
             <div className="p-8 rounded-lg w-full flex items-center justify-center bg-muted">
-              <Loader />
+              <Empty label="Brainwave is generating video..." />
             </div>
           )}
           {!video && !isLoading && <Empty label="Start typing to generate videos." />}

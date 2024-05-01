@@ -94,3 +94,8 @@
 .-rotate-360 {
   @apply rotate-[-360deg];
 }
+
+input:focus {
+  outline: none;
+  border-color: transparent;
+}
