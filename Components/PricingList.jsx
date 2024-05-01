@@ -1,6 +1,7 @@
 import { check } from "../assets";
 import { pricing } from "../constants";
 import Button from "./Button";
+
 const PricingList = () => {
   return (
     <div className="flex gap-[1rem] max-lg:flex-wrap">
@@ -23,8 +24,7 @@ const PricingList = () => {
           </div>
           <Button
             className="w-full mb-6"
-            href={item.price ? "/pricing" : "www.taqiabbas.me/Contact"}
-            white={!!item.price}
+            white={false}
           >
             {item.price ? "Get started" : "Contact us"}
           </Button>
@@ -34,7 +34,7 @@ const PricingList = () => {
                 className="flex items-start py-5 border-t border-n-6"
                 key={index}
               >
-                <img src={check} width={24} height={24} alt="check" />
+                <img src={check.src} width={24} height={24} alt="check" />
                 <p className="body-2 ml-4">{feature}</p>
               </li>
             ))}

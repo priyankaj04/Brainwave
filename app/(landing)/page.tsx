@@ -4,6 +4,9 @@ import Hero from "@/components/Hero.tsx";
 import Benefits from '@/components/Benefits'
 import Collaboration from '@/components/Collaboration'
 import Services from "@/Components/Services";
+import Pricing from "@/Components/Pricing";
+import Roadmap from "@/Components/Roadmap";
+import Footer from "@/Components/Footer";
 
 function LandingPage() {
   return (
@@ -15,6 +18,9 @@ function LandingPage() {
       <Benefits />
       <Collaboration />
       <Services />
+      <Pricing />
+      <Roadmap />
+      <Footer />
       <ButtonGradient />
     </div>
   );

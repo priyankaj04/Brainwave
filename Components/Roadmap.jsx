@@ -25,7 +25,7 @@ const Roadmap = () => {
                   <div className="absolute top-0 left-0 max-w-full">
                     <img
                       className="w-full"
-                      src={grid}
+                      src={grid.src}
                       alt="Grid"
                       width={550}
                       height={550}
@@ -36,7 +36,7 @@ const Roadmap = () => {
                       <Tagline>{item.date}</Tagline>
                       <div className="flex items-center px-4 py-1 bg-n-1 rounded text-n-8">
                         <img
-                          src={item.status === "done" ? check2 : loading1}
+                          src={item.status === "done" ? check2.src : loading1.src}
                           className="mr-2.5"
                           width={16}
                           height={16}
@@ -47,7 +47,7 @@ const Roadmap = () => {
                     </div>
                     <div className="mb-10 -my-10 -mx-15">
                       <img
-                        src={item.imageUrl}
+                        src={item.imageUrl.src}
                         className="w-full"
                         alt={item.title}
                         width={630}
