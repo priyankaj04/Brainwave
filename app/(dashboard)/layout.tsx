@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
+import Robot from "@/components/Robot";
 // import { getApiLimitCount } from "@/lib/api-limit";
 // import { checkSubscription } from "@/lib/subscription";
 
@@ -17,6 +18,7 @@ const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
         <Navbar />
         {children}
       </main>
+      <Robot />
     </div>
   );
 };
