@@ -26,7 +26,7 @@ const Header: React.FC<{}> = () => {
           <div className="relative h-8 w-8 mr-4">
             <Image fill src={brainwave} alt="Logo" />
           </div>
-          <h1 className={cn("text-2xl font-bold text-white", font.className)}>NeuroNest</h1>
+          <h1 className={cn("text-2xl font-bold text-white", font.className)}>Brainwave</h1>
         </Link>
         <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
           <Button className="lg:flex" white={false}>

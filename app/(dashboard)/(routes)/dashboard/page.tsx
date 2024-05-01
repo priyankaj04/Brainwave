@@ -1,5 +1,4 @@
 "use client";
-
 import {
 	ArrowRight,
 	Code,
@@ -9,7 +8,7 @@ import {
 	VideoIcon,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
-
+import { gradient } from '../../../../assets'
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
@@ -56,12 +55,21 @@ const DashboardPage = () => {
 
 	return (
 		<div>
+			<div className="fixed w-screen h-screen lg:h-full lg:w-full opacity-60 mix-blend-color-dodge pointer-events-none">
+				<div className="fixed top-1/2 left-1/2 w-screen h-screen lg:h-full lg:w-full -translate-x-3/4 -translate-y-1/2">
+					<img
+						className="w-full h-full"
+						src={gradient.src}
+						alt="Gradient"
+					/>
+				</div>
+			</div>
 			<div className="mb-8 space-y-4">
 				<h2 className="text-2xl md:text-4xl font-bold text-center">
 					Explore the power of AI
 				</h2>
 				<p className="text-muted-foreground font-light text-sm md:text-lg text-center">
-					Prometheus is a platform that allows you to generate music, videos,
+					Brainwave is a platform that allows you to generate music, videos,
 					and code using the power of AI.
 				</p>
 			</div>
