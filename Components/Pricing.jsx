@@ -30,9 +30,10 @@ const Pricing = () => {
           tag="Get started with Brainwave"
           title="Pay once, use forever"
         />
-        <div className="relative">
-          <PricingList />
+
+        <div className="flex justify-center items-center">
           <LeftLine />
+          <PricingList />
           <RightLine />
         </div>
         <div className="flex justify-center mt-10">
