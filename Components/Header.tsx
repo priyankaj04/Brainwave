@@ -1,5 +1,5 @@
 'use Client'
-import { useAuth } from "@clerk/nextjs";
+// import { useAuth } from "@clerk/nextjs";
 import { brainwave } from "../assets";
 import Button from "./Button";
 import Image from "next/image";
@@ -13,7 +13,7 @@ const font = Montserrat({
 });
 
 const Header = () => {
-  const { isSignedIn } = useAuth();
+  // const { isSignedIn } = useAuth();
 
   return (
     <header
@@ -26,11 +26,11 @@ const Header = () => {
           </div>
           <h1 className={cn("text-2xl font-bold text-white", font.className)}>NeuroNest</h1>
         </Link>
-        <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
-          <Button className="hidden lg:flex" white={false}>
-            <p className="text-white px-2 hover:text-purple-400">Get Started</p>
-          </Button>
-        </Link>
+        <Button className="hidden lg:flex" white={false}>
+          <p className="text-white hover:text-purple-400">Get Started</p>
+        </Button>
+        {/* <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
+        </Link> */}
       </div>
     </header>
   );
