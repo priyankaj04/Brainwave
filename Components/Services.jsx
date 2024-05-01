@@ -1,5 +1,6 @@
 import { service1, service2, service3, check } from "../assets";
 import { brainwaveServices, brainwaveServicesIcons } from "../constants";
+import ChatBubbleWing from "../assets/svg/ChatBubbleWing";
 import {
   PhotoChatMessage,
   Gradient,
@@ -66,7 +67,10 @@ const Services = () => {
                   photo editing feature. Try it now!
                 </p>
               </div>
-              <PhotoChatMessage />
+              {/*<div className="top-8  max-w-[17.5rem] py-6 px-8 bg-white rounded-t-xl rounded-bl-xl font-code text-base lg:top-16 lg:right-[8.75rem] lg:max-w-[17.5rem]">
+                Hey Brainwave, enhance this photo
+                <ChatBubbleWing className='absolute left-full' />
+                </div>*/}
             </div>
             <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
               <div className="py-12 px-4 xl:px-8">
@@ -106,8 +110,8 @@ const Services = () => {
                   height={400}
                   alt="scary robot"
                 />
-                <VideoChatMessage />
-                <VideoBar />
+                {/*<VideoChatMessage />
+                      <VideoBar />*/}
               </div>
             </div>
           </div>
