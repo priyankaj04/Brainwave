@@ -41,6 +41,14 @@ import {
   benefitCard5,
   benefitCard6
 } from "../assets";
+import {
+  ArrowRight,
+  Code,
+  ImageIcon,
+  MessageSquare,
+  Music,
+  VideoIcon,
+} from "lucide-react";
 
 export const navigation = [
   {
@@ -302,6 +310,69 @@ export const benefits = [
     text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
     backgroundUrl: benefitCard6.src,
     iconUrl: benefitIcon2,
+    imageUrl: benefitImage2,
+    light: true,
+  },
+];
+
+export const Tools = [
+  {
+    id: "0",
+    title: "Conversation",
+    text: "Our AI chatbot that can understand your queries. Personalized recommendations based on your preferences.",
+    backgroundUrl: benefitCard3.src,
+    icon: MessageSquare,
+    color: "text-violet-500",
+    bgColor: "bg-violet-500/10",
+    href: "/conversation",
+    imageUrl: benefitImage2,
+    light: true,
+  },
+  {
+    id: "1",
+    title: "Music Generation",
+    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    backgroundUrl: benefitCard4.src,
+    icon: Music,
+    color: "text-emerald-500",
+    bgColor: "bg-emerald-500/10",
+    href: "/music",
+    imageUrl: benefitImage2,
+    light: true,
+  },
+  {
+    id: "2",
+    title: "Connect everywhere",
+    text: "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
+    backgroundUrl: benefitCard1.src,
+    icon: ImageIcon,
+    color: "text-pink-700",
+    bgColor: "bg-pink-700/10",
+    href: "/image",
+    imageUrl: benefitImage2,
+    light: true,
+  },
+  {
+    id: "3",
+    title: "Fast responding",
+    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    backgroundUrl: benefitCard2.src,
+    icon: VideoIcon,
+    color: "text-orange-700",
+    bgColor: "bg-orange-700/10",
+    href: "/video",
+    imageUrl: benefitImage2,
+    light: true,
+  },
+  {
+    id: "4",
+    title: "Ask anything",
+    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    backgroundUrl: benefitCard5.src,
+    icon: Code,
+    color: "text-green-700",
+    bgColor: "bg-green-700/10",
+    href: "/code",
     imageUrl: benefitImage2,
     light: true,
   },
