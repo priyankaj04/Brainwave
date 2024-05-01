@@ -40,7 +40,7 @@ const Benefits = () => {
                   <Arrow />
                 </div>
               </div>
-              {item.light && <GradientLight />}
+              {item.light && <div className="absolute top-0 left-1/4 w-full aspect-square bg-radial-gradient from-[#28206C] to-[#28206C]/0 to-70% pointer-events-none" />}
               <div
                 className="absolute inset-0.5 bg-n-8"
                 style={{ clipPath: `url(#benefits)` }}
@@ -57,15 +57,18 @@ const Benefits = () => {
                   )}
                 </div>
               </div>
-              <ClipPath/>
+              <svg className="block" width={0} height={0}>
+                <clipPath id="benefits" clipPathUnits="objectBoundingBox">
+                  <path d="M0.079,0 h0.756 a0.079,0.083,0,0,1,0.058,0.026 l0.086,0.096 A0.079,0.083,0,0,1,1,0.179 V0.917 c0,0.046,-0.035,0.083,-0.079,0.083 H0.079 c-0.044,0,-0.079,-0.037,-0.079,-0.083 V0.083 C0,0.037,0.035,0,0.079,0" />
+                </clipPath>
+              </svg>
             </div>
           ))}
         </div>
       </div>
-
-      <div className="hidden absolute top-[55.25rem] left-10 right-10 h-0.25 bg-n-6 pointer-events-none xl:block" />
-      <PlusSvg className="hidden absolute top-[54.9375rem] left-[2.1875rem] z-2 pointer-events-none xl:block" />
-      <PlusSvg className="hidden absolute top-[54.9375rem] right-[2.1875rem] z-2 pointer-events-none xl:block" />
+      <div className="hidden absolute left-[2rem] -h-1 lg:left-7.5 xl:left-9 lg:right-7.5 xl:right-9 right-[2rem] h-0.25 bg-n-6 pointer-events-none xl:block" />
+      <PlusSvg className="hidden absolute left-[2rem] z-2 xl:block  lg:left-7.5 xl:left-9" />
+      <PlusSvg className="hidden absolute right-[2rem] z-2 xl:block lg:right-7.5 xl:right-9" />
     </section>
   );
 };
