@@ -9,7 +9,7 @@ const Notification = ({ className, title }) => {
       } flex items-center p-4 pr-6 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl gap-5`}
     >
       <img
-        src={notification1}
+        src={notification1.src}
         className="rounded-xl"
         width={62}
         height={62}
@@ -25,7 +25,7 @@ const Notification = ({ className, title }) => {
                 key={index}
               >
                 <img
-                  src={item}
+                  src={item.src}
                   className="w-full"
                   width={20}
                   height={20}

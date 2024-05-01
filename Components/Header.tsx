@@ -19,7 +19,7 @@ const Header: React.FC<{}> = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full py-5 z-50 border-b border-n-6 lg:bg-n-8/90 lg-backdrop-blur-sm "bg-n-8/90 backdrop-blur-sm"`}
+      className={`fixed top-0 left-0 w-full py-3 z-50 border-b border-n-6 lg:bg-n-8/90 bg-n-8/90 backdrop-blur-sm`}
     >
       <div className="flex justify-between items-center px-5 lg-px-7.5 xl:px-10 max-lg:py-4">
         <Link href="/" className="flex items-center xl:mr-8">
