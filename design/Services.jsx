@@ -6,7 +6,7 @@ export const Gradient = () => {
     <div className="absolute top-0 -left-[10rem] w-[56.625rem] h-[56.625rem] opacity-50 mix-blend-color-dodge pointer-events-none">
       <img
         className="absolute top-1/2 left-1/2 w-[79.5625rem] max-w-[79.5625rem] h-[88.5625rem] -translate-x-1/2 -translate-y-1/2"
-        src={gradient}
+        src={gradient.src}
         width={1417}
         height={1417}
         alt="Gradient"
@@ -30,7 +30,7 @@ export const VideoChatMessage = () => {
       Video generated!
       <div className="absolute left-5 -bottom-[1.125rem] flex items-center justify-center w-[2.25rem] h-[2.25rem] bg-color-1 rounded-[0.75rem]">
         <img
-          src={brainwaveWhiteSymbol}
+          src={brainwaveWhiteSymbol.src}
           width={26}
           height={26}
           alt="Brainwave"
@@ -51,7 +51,7 @@ export const VideoBar = () => {
   return (
     <div className="absolute left-0 bottom-0 w-full flex items-center p-6">
       <img
-        src={play}
+        src={play.src}
         width={24}
         height={24}
         alt="Play"

@@ -3,7 +3,7 @@ import ButtonGradient from "../../assets/svg/ButtonGradient.jsx";
 import Hero from "@/components/Hero.tsx";
 import Benefits from '@/components/Benefits'
 import Collaboration from '@/components/Collaboration'
-import PlusSvg from "../../assets/svg/PlusSvg.jsx";
+import Services from "@/Components/Services";
 
 function LandingPage() {
   return (
@@ -14,6 +14,7 @@ function LandingPage() {
       <Hero />
       <Benefits />
       <Collaboration />
+      <Services />
       <ButtonGradient />
     </div>
   );
