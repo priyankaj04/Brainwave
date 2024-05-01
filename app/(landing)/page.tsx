@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import ButtonGradient from "../../assets/svg/ButtonGradient";
-
+import Header from "@/components/Header.tsx";
+import ButtonGradient from "../../assets/svg/ButtonGradient.jsx";
 
 function LandingPage() {
   return (

@@ -1,19 +1,21 @@
-'use Client'
-// import { useAuth } from "@clerk/nextjs";
+"use client";
+
+import React from 'react';
 import { brainwave } from "../assets";
-import Button from "./Button";
+import { useAuth } from "@clerk/nextjs";
+import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Montserrat } from "next/font/google";
+import Button from "./Button.tsx";
 
 const font = Montserrat({
   weight: "600",
   subsets: ["latin"],
 });
 
-const Header = () => {
-  // const { isSignedIn } = useAuth();
+const Header: React.FC<{}> = () => {
+  const { isSignedIn } = useAuth();
 
   return (
     <header
@@ -26,13 +28,13 @@ const Header = () => {
           </div>
           <h1 className={cn("text-2xl font-bold text-white", font.className)}>NeuroNest</h1>
         </Link>
-        <Button className="hidden lg:flex" white={false}>
-          <p className="text-white hover:text-purple-400">Get Started</p>
-        </Button>
-        {/* <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
-        </Link> */}
+        <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
+          <Button className="lg:flex" white={false}>
+            <p className="text-white hover:text-purple-400">Get Started</p>
+          </Button>
+        </Link>
       </div>
-    </header>
+    </header >
   );
 };
 
