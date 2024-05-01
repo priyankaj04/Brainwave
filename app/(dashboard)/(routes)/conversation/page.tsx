@@ -3,70 +3,68 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
 import { MessageSquare } from "lucide-react";
-import { useRouter } from "next/navigation";
-import { ChatCompletionRequestMessage } from "openai";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
-
-import { BotAvatar } from "@/components/bot-avatar";
-import { Empty } from "@/components/empty";
-import { Heading } from "@/components/heading";
-import { Loader } from "@/components/loader";
-import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { UserAvatar } from "@/components/user-avatar";
-import { cn } from "@/lib/utils";
-
-import useProModal from "@/hooks/use-pro-modal";
-import { toast } from "react-hot-toast";
-import { formSchema } from "./constants";
+// import { useRouter } from "next/navigation";
+// import { ChatCompletionRequestMessage } from "openai";
+// import { useState } from "react";
+// import { useForm } from "react-hook-form";
+// import * as z from "zod";
+// import { BotAvatar } from "@/components/bot-avatar";
+// import { Empty } from "@/components/empty";
+// import { Heading } from "@/components/heading";
+// import { Loader } from "@/components/loader";
+// import { Button } from "@/components/ui/button";
+// import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
+// import { Input } from "@/components/ui/input";
+// import { UserAvatar } from "@/components/user-avatar";
+// import { cn } from "@/lib/utils";
+// import useProModal from "@/hooks/use-pro-modal";
+// import { toast } from "react-hot-toast";
+// import { formSchema } from "./constants";
 
 const ConversationPage = () => {
-  const router = useRouter();
-  const proModal = useProModal();
-  const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
+  // const router = useRouter();
+  // const proModal = useProModal();
+  // const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      prompt: "",
-    },
-  });
+  // const form = useForm<z.infer<typeof formSchema>>({
+  //   resolver: zodResolver(formSchema),
+  //   defaultValues: {
+  //     prompt: "",
+  //   },
+  // });
 
-  const isLoading = form.formState.isSubmitting;
+  // const isLoading = form.formState.isSubmitting;
 
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    console.log(values);
-    try {
-      const userMessage: ChatCompletionRequestMessage = {
-        role: "user",
-        content: values.prompt,
-      };
-      const newMessages = [...messages, userMessage];
+  // const onSubmit = async (values: z.infer<typeof formSchema>) => {
+  //   console.log(values);
+  //   try {
+  //     const userMessage: ChatCompletionRequestMessage = {
+  //       role: "user",
+  //       content: values.prompt,
+  //     };
+  //     const newMessages = [...messages, userMessage];
 
-      const response = await axios.post("/api/conversation", {
-        messages: newMessages,
-      });
+  //     const response = await axios.post("/api/conversation", {
+  //       messages: newMessages,
+  //     });
 
-      setMessages((current) => [...current, userMessage, response.data]);
-      form.reset();
-    } catch (error: any) {
-      console.log(error);
-      if (error?.response?.status === 403) {
-        proModal.onOpen();
-      } else {
-        toast.error("Something went wrong.");
-      }
-    } finally {
-      router.refresh();
-    }
-  };
+  //     setMessages((current) => [...current, userMessage, response.data]);
+  //     form.reset();
+  //   } catch (error: any) {
+  //     console.log(error);
+  //     if (error?.response?.status === 403) {
+  //       proModal.onOpen();
+  //     } else {
+  //       toast.error("Something went wrong.");
+  //     }
+  //   } finally {
+  //     router.refresh();
+  //   }
+  // };
 
   return (
     <div>
-      <Heading
+      {/*<Heading
         title="Conversation"
         description="Our most advanced AI conversation model."
         icon={MessageSquare}
@@ -124,6 +122,7 @@ const ConversationPage = () => {
           </div>
         </div>
       </div>
+      */}
     </div>
   );
 };

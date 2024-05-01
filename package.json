@@ -9,14 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
-   "@clerk/nextjs": "^4.23.0",
+    "@clerk/nextjs": "^4.23.0",
+    "@hookform/resolvers": "^3.3.4",
+    "@prisma/client": "^5.13.0",
+    "axios": "^1.6.8",
     "clsx": "^2.1.1",
+    "lucide-react": "^0.376.0",
     "next": "14.2.3",
+    "openai": "^4.40.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.51.3",
+    "react-hot-toast": "^2.4.1",
     "react-just-parallax": "^3.1.16",
     "scroll-lock": "^2.1.5",
-    "tailwind-merge": "^2.3.0"
+    "stripe": "^15.4.0",
+    "tailwind-merge": "^2.3.0",
+    "zod": "^3.23.5"
   },
   "devDependencies": {
     "@types/node": "^20",
