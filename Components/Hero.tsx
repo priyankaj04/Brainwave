@@ -23,9 +23,9 @@ const Hero = () => {
       id='hero'
       className={`pt-[12rem] -mt-[5.25rem] py-10 lg:py-16 xl:py-20`}
     >
-      <div className="px-5 md:px-10 lg:px-15" ref={parallaxRef}>
-        <div className="relative z-1 max-w-[62rem] text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
-          <h1 className="h1 mb-6">
+      <div className="px-5 md:px-10 lg:px-15 items-center flex flex-col " ref={parallaxRef}>
+        <div className="relative z-1 max-w-[62rem] items-center text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
+          <h1 className="h1 font-grotesk mb-6">
             Explore the Possibilites of&nbsp;AI&nbsp;Chatting with{" "}
             <span className="inline-block relative">
               Brainwave

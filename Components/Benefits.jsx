@@ -1,9 +1,6 @@
 import { benefits } from "../constants";
 import Heading from "./Heading";
-import Section from "./Section";
 import Arrow from "../assets/svg/Arrow";
-import { GradientLight } from "../design/Benefits";
-import ClipPath from "../assets/svg/ClipPath"
 import PlusSvg from "../assets/svg/PlusSvg";
 
 const Benefits = () => {
@@ -17,7 +14,7 @@ const Benefits = () => {
           className="md:max-w-md lg:max-w-2xl"
           title="Chat Smarter, Not Harder with Brainwave"
         />
-        <div className="flex flex-wrap gap-10 mb-10">
+        <div className="flex flex-wrap justify-center items-center gap-10 mb-10">
           {benefits.map((item) => (
             <div
               className="block relative cursor-pointer p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"

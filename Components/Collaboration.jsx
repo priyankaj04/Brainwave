@@ -3,11 +3,12 @@ import { collabApps, collabContent, collabText } from "../constants";
 import Button from "./Button";
 import Section from "./Section";
 import { LeftCurve, RightCurve } from "../design/Collaboration";
+import PlusSvg from "../assets/svg/PlusSvg";
 
 const Collaboration = () => {
   return (
     <Section crosses>
-      <div className="container lg:flex">
+      <div className="container mb-10 lg:mb-15 lg:flex">
         <div className="max-w-[25rem]">
           <h2 className="h2 mb-4 md:mb-8">
             AI Chat App for seemless collaboration
@@ -26,6 +27,9 @@ const Collaboration = () => {
             ))}
           </ul>
           <Button>Try it Now</Button>
+        </div>
+        <div className='flex flex-col mb-14 justify-end'>
+          <LeftCurve className='mb-28' />
         </div>
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
           <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
@@ -48,14 +52,12 @@ const Collaboration = () => {
               {collabApps.map((item, index) => (
                 <li
                   key={item.id}
-                  className={`absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom rotate-${
-                    index * 45
-                  }`}
+                  className={`absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom rotate-${index * 45
+                    }`}
                 >
                   <div
-                    className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${
-                      index * 45
-                    }`}
+                    className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${index * 45
+                      }`}
                   >
                     <img
                       src={item.icon.src}
@@ -67,11 +69,15 @@ const Collaboration = () => {
                 </li>
               ))}
             </ul>
-            <LeftCurve />
-            <RightCurve />
           </div>
         </div>
+        <div className='flex flex-col mt-64 justify-center'>
+          <RightCurve />
+        </div>
       </div>
+      <div className="hidden absolute left-[2rem] -h-1 lg:left-7.5 xl:left-9 lg:right-7.5 xl:right-9 right-[2rem] h-0.25 bg-n-6 pointer-events-none xl:block" />
+      <PlusSvg className="hidden absolute left-[2rem] z-2 xl:block  lg:left-7.5 xl:left-9" />
+      <PlusSvg className="hidden absolute right-[2rem] z-2 xl:block lg:right-7.5 xl:right-9" />
     </Section>
   );
 };
