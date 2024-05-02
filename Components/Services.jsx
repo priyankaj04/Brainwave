@@ -7,9 +7,9 @@ import {
   VideoBar,
   VideoChatMessage,
 } from "../design/Services";
-import Generating from "./Generating";
-import Heading from "./Heading";
-import Section from "./Section";
+import Generating from "./generating";
+import Heading from "./heading";
+import Section from "./section";
 
 const Services = () => {
   return (
@@ -82,11 +82,10 @@ const Services = () => {
                 <ul className="flex items-center justify-between">
                   {brainwaveServicesIcons.map((item, index) => (
                     <li
-                      className={`rounded-2xl flex items-center justify-center ${
-                        index === 2
-                          ? "w-[3rem] h-[3rem] p-0.25 bg-conic-gradient md:w-[4.5rem] md:h-[4.5rem]"
-                          : "flex w-10 h-10 bg-n-6 md:w-15 md:h-15"
-                      }`}
+                      className={`rounded-2xl flex items-center justify-center ${index === 2
+                        ? "w-[3rem] h-[3rem] p-0.25 bg-conic-gradient md:w-[4.5rem] md:h-[4.5rem]"
+                        : "flex w-10 h-10 bg-n-6 md:w-15 md:h-15"
+                        }`}
                       key={index}
                     >
                       <div

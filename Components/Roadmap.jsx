@@ -1,10 +1,10 @@
 import { check2, grid, loading1 } from "../assets";
 import { roadmap } from "../constants";
 import { Gradient } from "../design/Roadmap";
-import Button from "./Button";
-import Heading from "./Heading";
-import Section from "./Section";
-import Tagline from "./Tagline";
+import Button from "./button";
+import Heading from "./heading";
+import Section from "./section";
+import Tagline from "./tagline";
 import PlusSvg from "../assets/svg/PlusSvg";
 import { gradient } from "../assets"
 
@@ -19,9 +19,8 @@ const Roadmap = () => {
             return (
               <div
                 key={item.id}
-                className={`md:flex even:md:translate-y-[7rem] p-0.25 rounded-[2.5rem] ${
-                  item.colorful ? "bg-conic-gradient" : "bg-n-6"
-                }`}
+                className={`md:flex even:md:translate-y-[7rem] p-0.25 rounded-[2.5rem] ${item.colorful ? "bg-conic-gradient" : "bg-n-6"
+                  }`}
               >
                 <div className="relative p-8 bg-n-8 rounded-[2.4375rem] overflow-hidden xl:p-15 ">
                   <div className="absolute top-0 left-0 max-w-full">

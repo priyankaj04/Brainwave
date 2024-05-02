@@ -1,13 +1,13 @@
 "use client";
 import { curve, heroBackground, robot } from "../assets";
 import { useEffect, useState } from "react";
-import Button from "./Button";
+import Button from "./button";
 import { heroIcons } from "../constants";
 import { ScrollParallax, MouseParallax } from "react-just-parallax";
 import { useRef } from "react";
-import Generating from "./Generating";
-import Notification from "./Notification";
-import CompanyLogos from "./CompanyLogos";
+import Generating from "./generating";
+import Notification from "./notification";
+import CompanyLogos from "./companylogos";
 import PlusSvg from "../assets/svg/PlusSvg";
 
 const Hero = () => {

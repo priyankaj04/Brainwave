@@ -1,5 +1,5 @@
 import { benefits } from "../constants";
-import Heading from "./Heading";
+import Heading from "./heading";
 import Arrow from "../assets/svg/Arrow";
 import PlusSvg from "../assets/svg/PlusSvg";
 

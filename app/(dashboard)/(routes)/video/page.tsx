@@ -8,8 +8,8 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
-import { Empty } from "@/components/empty";
-import { ChatHeading } from "@/components/ChatHeading";
+import { Empty } from "@/Components/empty";
+import { ChatHeading } from "@/Components/chatheading";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";

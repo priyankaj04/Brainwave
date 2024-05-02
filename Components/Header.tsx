@@ -7,7 +7,7 @@ import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import Button from "./Button.tsx";
+import Button from "./button";
 
 const font = Montserrat({
   weight: "600",

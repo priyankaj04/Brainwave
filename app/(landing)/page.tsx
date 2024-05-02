@@ -1,12 +1,12 @@
-import Header from "@/components/Header.tsx";
+import Header from "@/Components/header.jsx";
 import ButtonGradient from "../../assets/svg/ButtonGradient.jsx";
-import Hero from "@/components/Hero.tsx";
-import Benefits from '@/components/Benefits'
-import Collaboration from '@/components/Collaboration'
-import Services from "@/Components/Services";
-import Pricing from "@/Components/Pricing";
-import Roadmap from "@/Components/Roadmap";
-import Footer from "@/Components/Footer";
+import Hero from "@/Components/hero.jsx";
+import Benefits from '@/Components/benefits.jsx'
+import Collaboration from '@/Components/collaboration.jsx'
+import Services from "@/Components/services.jsx";
+import Pricing from "@/Components/pricing.jsx";
+import Roadmap from "@/Components/roadmap.jsx";
+import Footer from "@/Components/footer.jsx";
 
 function LandingPage() {
   return (

@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
 import { useState } from "react";
 import { MessageSquare } from "lucide-react";
-import { ChatHeading } from "@/components/ChatHeading";
+import { ChatHeading } from "@/Components/chatheading";
 import { useForm } from "react-hook-form";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
@@ -17,10 +17,10 @@ import { useRouter } from "next/navigation";
 import * as z from "zod";
 import { ChatCompletionRequestMessage } from "openai";
 import * as z from "zod";
-import { Empty } from "@/components/Empty";
-import { UserAvatar } from "@/components/UserAvatar";
-import { Avatar } from "@/components/Avatar";
-import GradientBackground from '@/components/GradientBackground';
+import { Empty } from "@/Components/empty";
+import { UserAvatar } from "@/Components/useravatar";
+import { Avatar } from "@/Components/avatar";
+import GradientBackground from '@/Components/gradientbackground';
 import violet from '@/assets/violet.png';
 
 
@@ -37,7 +37,7 @@ const ConversationPage = () => {
   });
 
   const isLoading = form.formState.isSubmitting;
-  
+
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     console.log(values);
     // event.preventDefault()

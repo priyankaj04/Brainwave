@@ -1,8 +1,8 @@
 'use client';
-import Section from "./Section";
+import Section from "./section";
 import { smallSphere, stars } from "../assets";
-import Heading from "../Components/Heading";
-import PricingList from "./PricingList";
+import Heading from "./heading";
+import PricingList from "./pricinglist";
 import { LeftLine, RightLine } from "../design/Pricing";
 import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";
