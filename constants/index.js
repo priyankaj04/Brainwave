@@ -1,3 +1,5 @@
+export const MAX_FREE_COUNTS = 5;
+
 import {
   benefitIcon1,
   benefitIcon2,

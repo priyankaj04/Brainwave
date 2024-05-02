@@ -18,7 +18,7 @@ import useProModal from "@/hooks/use-pro-modal";
 import Image from "next/image";
 import { toast } from "react-hot-toast";
 import { amountOptions, formSchema, resolutionOptions } from "./constants";
-
+import pink from '@/assets/pink.png';
 
 const ImagePage = () => {
   const router = useRouter();
@@ -60,6 +60,15 @@ const ImagePage = () => {
 
   return (
     <div>
+      <div className="fixed w-screen h-screen opacity-20 pointer-events-none">
+        <div className="fixed top-1/2 left-1/2 w-screen h-screen -translate-x-3/4 -translate-y-1/2">
+          <img
+            className="w-full h-full"
+            src={pink.src}
+            alt="Gradient"
+          />
+        </div>
+      </div>
       <ChatHeading
         title="Image Generation"
         description="Our most advanced AI Image Generation model."

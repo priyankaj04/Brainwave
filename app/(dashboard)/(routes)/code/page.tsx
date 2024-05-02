@@ -20,6 +20,7 @@ import { Avatar } from "@/components/Avatar";
 import useProModal from "@/hooks/use-pro-modal";
 import { toast } from "react-hot-toast";
 import { formSchema } from "./constants";
+import green from '@/assets/green.png';
 
 const CodePage = () => {
   const router = useRouter();
@@ -64,6 +65,15 @@ const CodePage = () => {
 
   return (
     <div>
+      <div className="fixed w-screen h-screen opacity-20 pointer-events-none">
+        <div className="fixed top-1/2 left-1/2 w-screen h-screen -translate-x-3/4 -translate-y-1/2">
+          <img
+            className="w-full h-full"
+            src={green.src}
+            alt="Gradient"
+          />
+        </div>
+      </div>
       <ChatHeading
         title="Code Generation"
         description="Our most advanced AI Code Generation model."

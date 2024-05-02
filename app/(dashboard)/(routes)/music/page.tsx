@@ -15,6 +15,7 @@ import useProModal from "@/hooks/use-pro-modal";
 import { toast } from "react-hot-toast";
 import { formSchema } from "./constants";
 import { ChatHeading } from "@/components/ChatHeading";
+import emerald from '@/assets/emerald.png';
 
 const MusicPage = () => {
   const router = useRouter();
@@ -52,6 +53,15 @@ const MusicPage = () => {
 
   return (
     <div>
+      <div className="fixed w-screen h-screen opacity-20 pointer-events-none">
+        <div className="fixed top-1/2 left-1/2 w-screen h-screen -translate-x-3/4 -translate-y-1/2">
+          <img
+            className="w-full h-full"
+            src={emerald.src}
+            alt="Gradient"
+          />
+        </div>
+      </div>
       <ChatHeading
         title="Music Generation"
         description="Our most advanced AI Music Generation model."

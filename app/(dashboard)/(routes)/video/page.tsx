@@ -13,7 +13,7 @@ import { ChatHeading } from "@/components/ChatHeading";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-
+import orange from '@/assets/orange.png';
 import useProModal from "@/hooks/use-pro-modal";
 import { toast } from "react-hot-toast";
 import { formSchema } from "./constants";
@@ -54,6 +54,15 @@ const VideoPage = () => {
 
   return (
     <div>
+      <div className="fixed w-screen h-screen opacity-20 pointer-events-none">
+        <div className="fixed top-1/2 left-1/2 w-screen h-screen -translate-x-3/4 -translate-y-1/2">
+          <img
+            className="w-full h-full"
+            src={orange.src}
+            alt="Gradient"
+          />
+        </div>
+      </div>
       <ChatHeading
         title="Video Generation"
         description="Our most advanced AI Video Generation model."
