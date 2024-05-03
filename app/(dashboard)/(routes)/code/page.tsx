@@ -4,16 +4,16 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
 import { Code } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { ChatCompletionRequestMessage } from "openai";
+import OpenAI from "openai";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import ReactMarkdown from "react-markdown";
 import * as z from "zod";
 import { ChatHeading } from "@/Components/chatheading";
 import { Empty } from "@/Components/empty";
-import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+import { Button } from "@/Components/ui/button";
+import { Form, FormControl, FormField, FormItem } from "@/Components/ui/form";
+import { Input } from "@/Components/ui/input";
 import { cn } from "@/lib/utils";
 import { UserAvatar } from "@/Components/useravatar";
 import { Avatar } from "@/Components/avatar";
@@ -25,7 +25,7 @@ import green from '@/assets/green.png';
 const CodePage = () => {
   const router = useRouter();
   const proModal = useProModal();
-  const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
+  const [messages, setMessages] = useState<OpenAI.ChatCompletionMessage[]>([]);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -39,8 +39,8 @@ const CodePage = () => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     console.log(values);
     try {
-      const userMessage: ChatCompletionRequestMessage = {
-        role: "user",
+      const userMessage: OpenAI.ChatCompletionMessage = {
+        role: "assistant",
         content: values.prompt,
       };
       const newMessages = [...messages, userMessage];
@@ -122,10 +122,10 @@ const CodePage = () => {
                 key={index}
                 className={cn(
                   "p-8 w-full flex items-start gap-x-8 rounded-lg",
-                  message.role === "user" ? "bg-white border border-black/10" : "bg-muted"
+                  message.role === "assistant" ? "bg-white border border-black/10" : "bg-muted"
                 )}
               >
-                {message.role === "user" ? <UserAvatar /> : <Avatar />}
+                {message.role === "assistant" ? <UserAvatar /> : <Avatar />}
                 <ReactMarkdown
                   className="text-sm overflow-hidden leading-7"
                   components={{

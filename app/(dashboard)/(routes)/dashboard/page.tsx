@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 import { gradient } from '../../../../assets'
 import { Tools } from "../../../../constants";
 import Arrow from "../../../../assets/svg/Arrow";
-import { Card } from "@/components/ui/card";
+import { Card } from "@/Components/ui/card";
 import { cn } from "@/lib/utils";
 
 const tools = [

@@ -6,28 +6,26 @@ import { useState } from "react";
 import { MessageSquare } from "lucide-react";
 import { ChatHeading } from "@/Components/chatheading";
 import { useForm } from "react-hook-form";
-import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Form, FormControl, FormField, FormItem } from "@/Components/ui/form";
+import { Button } from "@/Components/ui/button";
+import { Input } from "@/Components/ui/input";
 import { cn } from "@/lib/utils";
 import { toast } from "react-hot-toast";
 import { formSchema } from "./constants";
 import useProModal from "@/hooks/use-pro-modal";
 import { useRouter } from "next/navigation";
 import * as z from "zod";
-import { ChatCompletionRequestMessage } from "openai";
-import * as z from "zod";
+import OpenAI from "openai";
 import { Empty } from "@/Components/empty";
 import { UserAvatar } from "@/Components/useravatar";
 import { Avatar } from "@/Components/avatar";
-import GradientBackground from '@/Components/gradientbackground';
 import violet from '@/assets/violet.png';
 
 
 const ConversationPage = () => {
   const router = useRouter();
   const proModal = useProModal();
-  const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
+  const [messages, setMessages] = useState<OpenAI.ChatCompletionMessage[]>([]);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -42,8 +40,8 @@ const ConversationPage = () => {
     console.log(values);
     // event.preventDefault()
     try {
-      const userMessage: ChatCompletionRequestMessage = {
-        role: "user",
+      const userMessage: OpenAI.ChatCompletionMessage = {
+        role: "assistant",
         content: values.prompt,
       };
       const newMessages = [...messages, userMessage];
@@ -126,10 +124,10 @@ const ConversationPage = () => {
                 key={index}
                 className={cn(
                   "p-8 w-full flex items-start gap-x-8 rounded-lg",
-                  message.role === "user" ? "bg-white border border-black/10" : "bg-muted"
+                  message.role === "assistant" ? "bg-white border border-black/10" : "bg-muted"
                 )}
               >
-                {message.role === "user" ? <UserAvatar /> : <Avatar />}
+                {message.role === "assistant" ? <UserAvatar /> : <Avatar />}
                 <p className="text-sm">{message.content}</p>
               </div>
             ))}
