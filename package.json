@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prebuild": "npx tailwindcss -i ./app/global.css -o ./app/global.css",
     "generate": "prisma generate --schema=prisma/schema.prisma",
     "deploy": "prisma migrate deploy",
     "dev": "next dev",
