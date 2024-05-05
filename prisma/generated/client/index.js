@@ -138,7 +138,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/Users/apple/Downloads/brainwave/prisma/generated/client",
+      "value": "/Users/apple/Desktop/Brainwave/prisma/generated/client",
       "fromEnvVar": null
     },
     "config": {
@@ -155,7 +155,7 @@ const config = {
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": "../../../.env",
+    "rootEnvPath": null,
     "schemaEnvPath": "../../../.env"
   },
   "relativePath": "../..",
