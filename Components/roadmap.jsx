@@ -3,8 +3,8 @@ import { roadmap } from "../constants";
 import { Gradient } from "../design/Roadmap";
 import Button from "./button";
 import Heading from "./heading";
-import Section from "./Section";
-import Tagline from "./Tagline";
+import Section from "./section";
+import Tagline from "./tagline";
 import PlusSvg from "../assets/svg/PlusSvg";
 import { gradient } from "../assets"
 

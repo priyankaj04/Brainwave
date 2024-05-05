@@ -1,5 +1,5 @@
 import { socials } from "../constants";
-import Section from "./Section";
+import Section from "./section";
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
         <p className="caption text-n-4 lg:block">
           © {new Date().getFullYear()}. All rights reserved.
         </p>
-       
+
         <ul className="flex gap-5 flex-wrap">
           {socials.map((item) => (
             <a
@@ -20,7 +20,7 @@ const Footer = () => {
               <img src={item.iconUrl.src} title={item.title} alt={item.title} width={35} height={35} />
             </a>
           ))}
-          </ul>
+        </ul>
       </div>
     </Section>
   );

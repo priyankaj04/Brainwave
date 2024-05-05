@@ -15,7 +15,7 @@ import { Button } from "@/Components/ui/button";
 import { Form, FormControl, FormField, FormItem } from "@/Components/ui/form";
 import { Input } from "@/Components/ui/input";
 import { cn } from "@/lib/utils";
-import { UserAvatar } from "@/Components/UserAvatar";
+import { UserAvatar } from "@/Components/useravatar";
 import { Avatar } from "@/Components/avatar";
 import useProModal from "@/hooks/use-pro-modal";
 import { toast } from "react-hot-toast";

@@ -17,7 +17,7 @@ import { useRouter } from "next/navigation";
 import * as z from "zod";
 import OpenAI from "openai";
 import { Empty } from "@/Components/empty";
-import { UserAvatar } from "@/Components/UserAvatar";
+import { UserAvatar } from "@/Components/useravatar";
 import { Avatar } from "@/Components/avatar";
 import violet from '@/assets/violet.png';
 

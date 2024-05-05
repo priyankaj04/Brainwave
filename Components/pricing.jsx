@@ -1,5 +1,5 @@
 'use client';
-import Section from "./Section";
+import Section from "./section";
 import { smallSphere, stars } from "../assets";
 import Heading from "./heading";
 import PricingList from "./pricinglist";

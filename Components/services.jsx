@@ -9,7 +9,7 @@ import {
 } from "../design/Services";
 import Generating from "./generating";
 import Heading from "./heading";
-import Section from "./Section";
+import Section from "./section";
 
 const Services = () => {
   return (
