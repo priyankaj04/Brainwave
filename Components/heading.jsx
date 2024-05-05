@@ -1,4 +1,4 @@
-import Tagline from "./tagline";
+import Tagline from "./Tagline";
 const Heading = ({ className, title, text, tag }) => {
   return (
     <div

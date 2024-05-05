@@ -9,8 +9,6 @@ import {
   chromecast,
   disc02,
   discord,
-  discordBlack,
-  facebook,
   figma,
   file02,
   framer,
@@ -33,15 +31,15 @@ import {
   searchMd,
   slack,
   sliders04,
-  telegram,
-  twitter,
   yourlogo,
   benefitCard1,
   benefitCard2,
   benefitCard3,
   benefitCard4,
   benefitCard5,
-  benefitCard6
+  benefitCard6,
+  github,
+  linkedin
 } from "../assets";
 import {
   ArrowRight,
@@ -383,32 +381,20 @@ export const Tools = [
 export const socials = [
   {
     id: "0",
-    title: "Discord",
-    iconUrl: discordBlack,
-    url: "#",
+    title: "github",
+    iconUrl: github,
+    url: "https://github.com/priyankaj04/Brainwave",
   },
   {
     id: "1",
-    title: "Twitter",
-    iconUrl: twitter,
-    url: "#",
-  },
-  {
-    id: "2",
     title: "Instagram",
     iconUrl: instagram,
-    url: "#",
+    url: "https://instagram.com/techtangoo/",
   },
   {
-    id: "3",
-    title: "Telegram",
-    iconUrl: telegram,
-    url: "#",
-  },
-  {
-    id: "4",
-    title: "Facebook",
-    iconUrl: facebook,
-    url: "#",
-  },
+    id: "1",
+    title: "LinkedIn",
+    iconUrl: linkedin,
+    url: "https://linkedin.com/in/priyanka-j-687572213",
+  }
 ];

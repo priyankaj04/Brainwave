@@ -3,7 +3,7 @@ import ButtonGradient from "../../assets/svg/ButtonGradient.jsx";
 import Hero from "@/Components/hero";
 import Benefits from '@/Components/benefits.jsx'
 import Collaboration from '@/Components/collaboration.jsx'
-import Services from "@/Components/services.jsx";
+import Services from "@/Components/Services.jsx";
 import Pricing from "@/Components/pricing.jsx";
 import Roadmap from "@/Components/roadmap.jsx";
 import Footer from "@/Components/footer.jsx";

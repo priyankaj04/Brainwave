@@ -1,6 +1,6 @@
 import Navbar from "@/Components/navbar";
-import Sidebar from "@/Components/sidebar";
-import Robot from "@/Components/robot";
+import Sidebar from "@/Components/Sidebar";
+import Robot from "@/Components/Robot";
 // import { getApiLimitCount } from "@/lib/api-limit";
 // import { checkSubscription } from "@/lib/subscription";
 
