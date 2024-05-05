@@ -3,14 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "generate": "npx prisma generate",
-    "deploy": "npx prisma migrate deploy",
+    "generate": "prisma generate --schema=prisma/schema.prisma",
+    "deploy": "prisma migrate deploy",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prisma generate --schema=prisma/schema.prisma",
-    "vercel-build": "npx prisma generate && next build"
+    "postinstall": "prisma generate --schema=prisma/schema.prisma"
   },
   "prisma": {
     "schema": "prisma/schema.prisma"
