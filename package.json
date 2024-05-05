@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "npx prisma generate",
+    "postinstall": "prisma generate --schema=prisma/schema.prisma",
     "vercel-build": "npx prisma generate && next build"
   },
   "prisma": {
